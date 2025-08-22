@@ -12,8 +12,9 @@ if (storedDate) {
   localStorage.setItem(STORAGE_KEY, releaseDate);
 }
 
-document.getElementById("release-date").textContent =
-  releaseDate.toDateString();
+document.getElementById("release-date").textContent = releaseDate
+  .toDateString()
+  .slice(4);
 
 function updateCountdown() {
   const now = new Date().getTime();
