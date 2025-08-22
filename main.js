@@ -1,15 +1,14 @@
 const STORAGE_KEY = "releaseDate";
 
-let storedDate = localStorage.getItem(STORAGE_KEY);
+const storedDate = localStorage.getItem(STORAGE_KEY);
 let releaseDate;
 
 if (storedDate) {
   releaseDate = new Date(storedDate);
 } else {
-  releaseDate = new Date(storedDate);
   releaseDate = new Date();
   releaseDate.setDate(releaseDate.getDate() + 30);
-  localStorage.setItem(STORAGE_KEY, releaseDate);
+  localStorage.setItem(STORAGE_KEY, releaseDate.toISOString());
 }
 
 document.getElementById("release-date").textContent = releaseDate
