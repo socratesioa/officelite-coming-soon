@@ -1,0 +1,85 @@
+@use '../abstracts' as *;
+@use '../base/typography' as typo;
+
+#coming {
+    // padding: 0 24px;
+    position: relative;
+    max-width: 328px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 2;
+    @include respond(small, min) {
+        max-width: 448px;
+    }
+    @include respond(large, min) {
+        max-width: 1174px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 32px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+#coming .primary-btn {
+    justify-self: center;
+    @include respond(large, min) {
+        justify-self: end;
+    }
+}
+
+.release-date {
+    @include text-preset(typo.$text-preset-3);
+    text-transform: uppercase;
+    text-align: center;
+    color: $clr-white;
+    margin-bottom: 18px;
+    @include respond(large, min) {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
+.release-date span {
+    color: $clr-blue-dark;
+}
+
+.countdown-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+    margin-bottom: 40px;
+    @include respond(large, min) {
+        gap: 16px;
+        margin-bottom: 0;
+        max-width: 448px;
+    }
+}
+
+.countdown-details {
+    @include text-preset(typo.$countdown-splits);
+    color: hsla(0, 0%, 100%, 0.5);
+    display: grid;
+    align-content: center;
+    border-radius: 4px;
+    background-color: $clr-card-heading;
+    height: 92px;
+        width: 72px;
+    text-align: center;
+    @include respond(small, min) {
+        @include text-preset(typo.$countdown-splits-large);
+        border-radius: 13px;
+        height: 128px;
+        width: 100px;
+    }
+}
+
+.countdown-details span {
+    color: $clr-white;
+    @include text-preset(typo.$countdown-numbers);
+    @include respond(small, min) {
+        @include text-preset(typo.$countdown-numbers-large);
+    }
+}

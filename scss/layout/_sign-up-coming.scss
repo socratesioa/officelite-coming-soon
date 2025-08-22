@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+#sign-up-coming {
+    padding: 0 24px;
+    margin-bottom: 64px;
+    @include respond(small, min) {
+        margin-bottom: 104px;
+    }
+    @include respond(large, min) {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+#sign-up-coming .countdown-wrapper {
+    max-width: 328px;
+    margin: 0 auto;
+    @include respond(small, min) {
+max-width: 448px;
+    }
+    
+    @include respond(large, min) {
+        margin: unset;
+    }
+}
+
+#sign-up-coming .release-date {
+    color: $clr-body-medium;
+}
+
+#sign-up-coming .countdown-container {
+    margin-bottom: 0;
+}
+
+#sign-up-coming .countdown-details {
+    background-color: hsla(228, 100%, 66%, 0.1);
+    color: hsla(227, 22%, 26%, 0.5);
+}
+
+#sign-up-coming .countdown-details span {
+    color: $clr-blue-dark;
+}
+

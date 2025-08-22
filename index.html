@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Officelite coming soon site</title>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <header>
+        <img
+          src="./assets/shared/logo.svg"
+          class="logo"
+          alt="Officelite logo"
+          width="155"
+          height="30"
+          loading="eager"
+          decoding="async"
+        />
+      </header>
+      <main>
+        <section id="hero" role="region" aria-labelledby="hero-heading">
+          <div class="hero-text">
+            <h1>A simple solution to complex tasks is coming soon</h1>
+            <p>
+              Say goodbye to inefficient juggling of multiple apps, teams, and
+              projects. Officelite is the new collaboration platform built with
+              an intuitive interface to improve productivity.
+            </p>
+            <a
+              href="./sign-up.html"
+              class="primary-btn"
+              aria-label="Go to the sign up page to join the list"
+              >Get Started</a
+            >
+          </div>
+          <div class="hero-image-wrapper">
+            <img
+              src="./assets/home/illustration-charts.svg"
+              class="hero-img"
+              alt="Charts Illustration"
+              width="171"
+              height="192"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          id="pricing-plans"
+          role="region"
+          aria-labelledby="pricing-plans-heading"
+        >
+          <h2 id="pricing-plans-heading" class="visually-hidden">
+            Officelite Pricing Plans
+          </h2>
+          <article class="card">
+            <h3>Basic</h3>
+            <p class="pricing">
+              <span class="price">Free</span>
+              <span class="billing">Up to 5 users for free</span>
+            </p>
+            <ul>
+              <li>Basic document collaboration</li>
+              <li>2 GB storage</li>
+              <li>Great security and support</li>
+            </ul>
+            <a
+              href="./sign-up.html"
+              class="card-btn secondary"
+              aria-label="Try the Free plan"
+              >Try for Free</a
+            >
+          </article>
+          <article class="card pro">
+            <h3>Pro</h3>
+            <p class="pricing">
+              <span class="price">$9.99</span>
+              <span class="billing">Per user, billed monthly</span>
+            </p>
+            <ul>
+              <li>All essential integrations</li>
+              <li>50 GB storage</li>
+              <li>More control and insights</li>
+            </ul>
+            <a
+              href="./sign-up.html"
+              class="card-btn primary"
+              aria-label="Try the Pro plan for Free"
+              >Try for Free</a
+            >
+          </article>
+          <article class="card">
+            <h3>Ultimate</h3>
+            <p class="pricing">
+              <span class="price">$19.99</span>
+              <span class="billing">Per user, billed monthly</span>
+            </p>
+            <ul>
+              <li>Robust work management</li>
+              <li>100 GB storage</li>
+              <li>VIP support</li>
+            </ul>
+            <a
+              href="./sign-up.html"
+              class="card-btn secondary"
+              aria-label="Try the Ultimate plan for Free"
+              >Try for Free</a
+            >
+          </article>
+        </section>
+        <section id="coming" role="region" aria-labelledby="coming-heading">
+          <div class="countdown-wrapper">
+            <h2 id="coming-heading" class="visually-hidden">
+              Countdown to release date
+            </h2>
+            <p class="release-date">Coming <span id="release-date"></span></p>
+            <div class="countdown-container">
+              <p class="countdown-details"><span id="days">47</span>days</p>
+              <p class="countdown-details"><span id="hours">07</span>hours</p>
+              <p class="countdown-details"><span id="minutes">56</span>min</p>
+              <p class="countdown-details"><span id="seconds">14</span>sec</p>
+            </div>
+          </div>
+          <a
+            href="./sign-up.html"
+            class="primary-btn"
+            aria-label="Sign up now to get on the list"
+            >Get Started</a
+          >
+        </section>
+        <div class="footer-bg" aria-hidden="true"></div>
+      </main>
+    </div>
+
+    <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+
+    <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+    <script src="./main.js"></script>
+  </body>
+</html>

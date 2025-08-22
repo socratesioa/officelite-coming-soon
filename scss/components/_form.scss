@@ -1,0 +1,125 @@
+@use '../abstracts' as *;
+@use '../base/typography' as typo;
+
+#form {
+    display: grid;
+    gap: 24px;
+    padding: 24px;
+    border-radius: 13px;
+    background-color: $clr-white;
+    box-shadow: 0 50px 50px -25px hsla(227, 35%, 45%, 0.25);
+    @include respond(small, min) {
+        padding: 40px 42px 51px 42px;
+    }
+}
+
+.input-group {
+    position: relative;
+}
+
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    @include text-preset(typo.$text-preset-5a);
+    font-family: inherit;
+    color: $clr-body-medium;
+    padding: 0 16px 16px 16px;
+    border-bottom: 1px solid hsla(227, 14%, 52%, 0.5);
+}
+
+input::placeholder {
+    color: hsla(227, 14%, 52%, 0.5);
+}
+
+input:focus {
+    border-bottom: 1px solid $clr-blue-dark;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 8px;
+    border-radius: 8px;
+    padding: 24px 32px;
+    background-color: $clr-white;
+    border: 1px solid hsla(227, 22%, 26%, 0.153);
+    box-shadow: 0 50px 50px -25px hsla(227, 35%, 45%, 0.75);
+    position: absolute;
+    display: none;
+    z-index: 10000;
+}
+
+.dropdown-menu li {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li:focus-visible {
+    border-radius: 4px;
+    outline-offset: 4px;
+    outline: 1px solid $clr-blue-dark;
+}
+
+.option-separator {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: hsla(227, 14%, 52%, 0.5);
+}
+
+.down-arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.down-arrow.open {
+    transform: rotate(180deg);
+}
+
+.option {
+    display: flex;
+    gap: 8px;
+}
+
+strong {
+    color: $clr-card-heading;
+}
+
+.plan-price {
+    color: hsla(227, 22%, 26%, 0.4);
+    font-weight: 700;
+}
+
+.icon-check {
+    display: none;
+}
+
+.icon-check.selected {
+    display: block;
+}
+
+.input-error {
+    color: $clr-error;
+    border-bottom: 1px solid $clr-error;
+}
+
+.error-message {
+    display: none;
+    top: 4px;
+    right: 20px;
+    position: absolute;
+}
+

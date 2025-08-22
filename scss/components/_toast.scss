@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+@use '../base/typography' as typo;
+
+#toast {
+  @include text-preset(typo.$text-preset-5b);
+  color: $clr-white;
+  text-align: center;
+  width: calc(100% - 80px);
+  border-radius: 12px;
+  padding: 16px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $clr-blue-light;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 11000;
+  @include respond(small, min) {
+    width: 360px;
+    padding: 24px;
+  }
+  @include respond(large, min) {
+    position: absolute;
+    transform: translateY(unset);
+    top: 120px;
+  }
+}
+
+.toast-heading {
+  @include text-preset(typo.$text-preset-2);
+  color: $clr-white;
+  margin-bottom: 24px;
+}
+
+#toast.visible {
+  opacity: 1;
+  pointer-events: auto;
+}

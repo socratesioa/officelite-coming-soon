@@ -1,0 +1,101 @@
+@use '../abstracts' as *;
+@use '../base/typography' as typo;
+
+.card {
+    border-radius: 13px;
+    box-shadow: 0 50px 50px -25px hsla(227, 35%, 45%, 0.25);
+    padding: 40px;
+    background-color: $clr-white;
+    text-align: center;
+    @include respond(medium, min) {
+        width: 100%;
+        padding: 48px;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        justify-content: space-between;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "heading heading"
+        "pricing list"
+        "button list";
+        row-gap: 16px;
+    } 
+    @include respond(large, min) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: unset;
+        text-align: center;
+        gap: 0;
+        justify-content: unset;
+        padding: 40px 24px;
+    }
+}
+
+.card p {
+    @include text-preset(typo.$text-preset-5a);
+}
+
+.pricing span {
+    display: block;
+}
+
+.pricing {
+    display: grid;
+    gap: 8px;
+    margin-top: 40px;
+    margin-bottom: 56px;
+    color: $clr-card-heading;
+    @include respond(medium, min) {
+        grid-area: pricing;
+        margin-bottom: 24px;
+        margin-top: 0
+    }
+    @include respond(large, min) {
+        grid-area: unset;
+        margin-bottom: 56px;
+        margin-top: 40px;
+    }
+}
+
+.price {
+    @include text-preset(typo.$text-preset-1a);
+}
+
+.billing {
+    @include text-preset(typo.$text-preset-5a);
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    gap: 16px;
+    margin-bottom: 32px;
+    @include text-preset(typo.$text-preset-5a);
+    @include respond(medium, min) {
+        grid-area: list;
+        margin-bottom: 0;
+        align-content: start;
+    }
+    @include respond(large, min) {
+        grid-area: unset;
+        margin-bottom: 32px;
+        align-content: unset;
+    }
+}
+
+.pro {
+    background-image: url("/assets/home/bg-pattern-pricing.svg");
+    background-repeat: no-repeat;
+    background-position: center calc(100% - 8px);
+    background-color: $clr-blue-dark;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.pro h3 {
+    color: $clr-white;
+}
+
+.pro span {
+    color: $clr-white;
+}

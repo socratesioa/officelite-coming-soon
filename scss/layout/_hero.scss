@@ -1,0 +1,50 @@
+@use '../abstracts' as *;
+
+#hero {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    @include respond(small, min) {
+        padding: 0 40px;
+    }
+    @include respond(medium, min) {
+        display: grid;
+        grid-template-columns: 345px auto;
+        gap: 63px;
+        align-items: center;
+        margin-top: 104px;
+        margin-bottom: 140px;
+    }
+    @include respond(large, min) {
+        max-width: 1174px;
+        width: 100%;
+        padding: 0 32px;
+        margin: 0 auto;
+        margin-bottom: 184px;
+        margin-top: 102px;
+        grid-template-columns: 540px 1fr;
+        gap: 95px;
+    }
+}
+
+.hero-text {
+    padding: 0 24px;
+    display: grid;
+    gap: 24px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 100px;
+    @include respond(medium, min) {
+        text-align: left;
+        padding: 0;
+        align-items: start;
+        margin-bottom: 0;
+    }
+}
+
+.hero-text .primary-btn {
+    margin-top: 8px;
+}

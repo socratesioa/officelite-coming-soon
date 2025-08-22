@@ -1,0 +1,79 @@
+@use '../abstracts' as *;
+
+.site-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image: url("../assets/home/bg-pattern-header.svg");
+    background-repeat: no-repeat;
+    background-size: 458px 458px;
+    background-position: center -170px;
+    overflow-x: hidden;
+    @include respond(medium, min) {
+      background-size: 666px 666px;
+      background-position: 415px -190px;
+    }
+    @include respond(large, min) {
+      background-size: 1134px 1134px;
+      background-position: 656px -419px;
+      box-shadow: -2px 0 6px rgba(0,0,100,0.1), 2px 0 6px rgba(0,0,100,0.1);
+    }
+}
+
+.sign-up-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image: url("../assets/home/bg-pattern-header.svg");
+    background-repeat: no-repeat;
+    background-size: 458px 458px;
+    background-position: center -170px;
+    overflow-x: hidden;
+    @include respond(medium, min) {
+      background-image: none;
+    }
+    @include respond(large, min) {
+      box-shadow: -2px 0 6px rgba(0,0,100,0.1), 2px 0 6px rgba(0,0,100,0.1);
+      min-height: 100dvh;
+      position: relative;
+    }
+}
+
+.group-wrapper {
+    @include respond(large, min) {
+    display: grid;
+    gap: 40px;
+    margin: 0;
+    }
+}
+
+.sign-up-page {
+  @include respond(large, min) {
+    max-width: 1174px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    align-items: center;
+    margin-top: 126px;
+  }
+}
+
+.side-pattern {
+  @include respond(large, min) {
+    display: block;
+    background-color: $clr-heading-dark;
+    background-image: url("../assets/sign-up/bg-pattern-side.svg");
+    background-size: 2036px 2036px;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 50px) calc(100% - 20px);
+    height: 100%;
+    max-width: 420px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+}

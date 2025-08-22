@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+header {
+    padding-top: 46px;
+    display: flex;
+    justify-content: center;
+    @include respond(medium, min) {
+        padding-top: 72px;
+        padding-left: 40px;
+        justify-content: flex-start;
+    }
+    @include respond(large, min) {
+        max-width: 1174px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 81px 32px 0 32px;
+    }
+}

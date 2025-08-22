@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Officelite coming soon site</title>
+  </head>
+  <body>
+    <div class="sign-up-wrapper">
+      <header>
+        <a
+          href="./index.html"
+          class="image-link"
+          aria-label="Go to Officelite Home Page"
+          ><img
+            src="./assets/shared/logo.svg"
+            class="logo"
+            alt="Officelite logo"
+            width="155"
+            height="30"
+            loading="eager"
+            decoding="async"
+        /></a>
+      </header>
+      <main class="sign-up-page">
+        <div class="group-wrapper">
+          <section id="smarter" role="region" aria-labelledby="smarter-heading">
+            <h1 id="smarter-heading">Work smarter. Save time.</h1>
+            <p>
+              Easily manage your projects. Get on the list and receive in-app
+              perks available only to early subscribers. We are moving into
+              final development and getting ready for official launch soon.
+            </p>
+          </section>
+          <section
+            id="sign-up-coming"
+            role="region"
+            aria-labelledby="sign-up-coming-heading"
+          >
+            <h2 id="sign-up-coming-heading" class="visually-hidden">
+              Countdown to release date
+            </h2>
+            <div class="countdown-wrapper">
+              <p class="release-date">Coming <span id="release-date"></span></p>
+              <div class="countdown-container">
+                <p class="countdown-details"><span id="days">00</span>days</p>
+                <p class="countdown-details"><span id="hours">00</span>hours</p>
+                <p class="countdown-details"><span id="minutes">00</span>min</p>
+                <p class="countdown-details"><span id="seconds">00</span>sec</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section
+          id="join"
+          role="region"
+          aria-labelledby="join-heading"
+          tabindex="-1"
+        >
+          <h2 id="join-heading" class="visually-hidden">
+            Sign up to get on the list
+          </h2>
+          <form id="form" novalidate>
+            <div class="input-group">
+              <label for="name" class="visually-hidden">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                placeholder="Name"
+                aria-describedby="name-error"
+                required
+              />
+              <span class="error-message" id="name-error" aria-live="polite">
+                <img
+                  src="./assets/sign-up/icon-cross.svg"
+                  class="error-icon"
+                  aria-hidden="true"
+                />
+              </span>
+            </div>
+            <div class="input-group">
+              <label for="email" class="visually-hidden">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="Email Address"
+                aria-describedby="email-error"
+                required
+              />
+              <span class="error-message" id="email-error" aria-live="polite"
+                ><img
+                  src="./assets/sign-up/icon-cross.svg"
+                  class="error-icon"
+                  aria-hidden="true"
+                />
+              </span>
+            </div>
+            <div class="dropdown">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="plan-menu"
+              >
+                <div class="ghost-placeholder">
+                  <strong>Basic Pack </strong
+                  ><span class="plan-price">Free</span>
+                </div>
+                <span class="down-arrow"
+                  ><img src="./assets/sign-up/icon-arrow-down.svg" alt="" />
+                </span>
+              </button>
+              <ul class="dropdown-menu" id="plan-menu" role="listbox">
+                <li
+                  data-value="basic"
+                  tabindex="0"
+                  role="option"
+                  aria-selected="true"
+                >
+                  <div class="option">
+                    <strong>Basic Pack</strong>
+                    <span class="plan-price">Free</span>
+                  </div>
+                  <img
+                    src="./assets/sign-up/icon-check.svg"
+                    class="icon-check"
+                    alt=""
+                  />
+                </li>
+                <div class="option-separator" aria-hidden="true"></div>
+                <li
+                  data-value="pro"
+                  tabindex="0"
+                  role="option"
+                  aria-selected="false"
+                >
+                  <div class="option">
+                    <strong>Pro Pack</strong>
+                    <span class="plan-price">$9.99</span>
+                  </div>
+                  <img
+                    src="./assets/sign-up/icon-check.svg"
+                    class="icon-check"
+                    alt=""
+                  />
+                </li>
+                <div class="option-separator" aria-hidden="true"></div>
+                <li
+                  data-value="ultimate"
+                  tabindex="0"
+                  role="option"
+                  aria-selected="false"
+                >
+                  <div class="option">
+                    <strong>Ultimate Pack</strong>
+                    <span class="plan-price">$19.99</span>
+                  </div>
+                  <img
+                    src="./assets/sign-up/icon-check.svg"
+                    class="icon-check"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+            <input type="hidden" name="plan" id="selected-plan" value="basic" />
+            <div class="input-group">
+              <label for="phone" class="visually-hidden">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                inputmode="tel"
+                placeholder="Phone Number"
+                autocomplete="tel"
+                aria-describedby="phone-error"
+                required
+              />
+              <span class="error-message" id="phone-error" aria-live="polite">
+                <img
+                  src="./assets/sign-up/icon-cross.svg"
+                  class="error-icon"
+                  aria-hidden="true"
+                />
+              </span>
+            </div>
+            <div class="input-group">
+              <label for="company" class="visually-hidden">Company</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Company"
+                autocomplete="organization"
+                aria-describedby="company-error"
+                required
+              />
+              <span class="error-message" id="company-error" aria-live="polite">
+                <img
+                  src="./assets/sign-up/icon-cross.svg"
+                  class="error-icon"
+                  aria-hidden="true"
+                />
+              </span>
+            </div>
+            <button type="submit" id="submitBtn">Get on the list</button>
+          </form>
+        </section>
+        <div
+          id="toast"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          aria-hidden="true"
+          class="toast"
+        >
+          <p class="toast-heading">Thank you!</p>
+          <p>You have succesfully joined the list.</p>
+          <p>We will notify you as soon as we launch!</p>
+        </div>
+        <div class="sign-up-footer" aria-hidden="true"></div>
+      </main>
+      <div class="side-pattern" aria-hidden="true"></div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="./form.js"></script>
+  </body>
+</html>

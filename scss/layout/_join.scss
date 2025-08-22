@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+
+#join {
+    padding: 0 24px;
+    position: relative;
+    z-index: 10;
+    @include respond(small, min) {
+        padding: 0;
+        max-width: 445px;
+        margin: 0 auto;
+    }
+    @include respond(large, min) {
+        margin: unset;
+        width: 100%;
+    }
+}
+
+.sign-up-footer {
+    background-color: $clr-heading-dark;
+    background-image: url("../assets/home/bg-pattern-footer.svg");
+    background-repeat: no-repeat;
+    background-size: 486px 486px;
+    background-position: center 100%;
+    height: 320px;
+    margin-top: -233px;
+    position: relative;
+    z-index: 0;
+    @include respond(small, min) {
+        height: 380px;
+        margin-top: -254px;
+        background-size: 1454px 1454px;
+        background-position: center calc(100% + 525px);
+    }
+    @include respond(large, min) {
+        display: none;
+    }
+}

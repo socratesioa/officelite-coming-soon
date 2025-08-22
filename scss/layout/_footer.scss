@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.footer-bg {
+    height: 1248px;
+    background-color: $clr-heading-dark;
+    background-image: url("/assets/home/bg-pattern-footer.svg");
+    background-repeat: no-repeat;
+    background-size: 1202px 1202px;
+    background-position: center calc(100% + 110px);
+    margin-top: -1148px;
+    position: relative;
+    z-index: -1;
+    @include respond(medium, min) {
+        height: 986px;
+        margin-top: -886px;
+        background-size: 1454px 1454px;
+        background-position: center calc(100% + 480px);
+    }
+    @include respond(large, min) {
+        height: 603px;
+        margin-top: -512px;
+        background-size: 2036px 2036px;
+        background-position: calc(100% - 106px) calc(100% + 834px);
+    }
+}

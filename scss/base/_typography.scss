@@ -1,0 +1,114 @@
+@use '../abstracts' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+$font-body: "Kumbh Sans", sans-serif;
+
+$text-preset-1a: (
+    family: $font-body,
+    size: 56px,
+    lineHeight: 64px,
+    letterSpacing: 0,
+    weight: 700,
+);
+
+$text-preset-1b: (
+    family: $font-body,
+    size: 40px,
+    lineHeight: 48px,
+    letterSpacing: 0,
+    weight: 700,
+);
+
+$text-preset-2: (
+    family: $font-body,
+    size: 20px,
+    lineHeight: 28px,
+    letterSpacing: 0,
+    weight: 700,
+);
+
+$text-preset-3: (
+    family: $font-body,
+    size: 16px,
+    lineHeight: 48px,
+    letterSpacing: 5px,
+    weight: 700,
+);
+
+$text-preset-4: (
+    family: $font-body,
+    size: 18px,
+    lineHeight: 28px,
+    letterSpacing: 0,
+    weight: 400,
+);
+
+$text-preset-5a: (
+    family: $font-body,
+    size: 16px,
+    lineHeight: 28px,
+    letterSpacing: 0,
+    weight: 400,
+);
+
+$text-preset-5b: (
+    family: $font-body,
+    size: 16px,
+    lineHeight: 26px,
+    letterSpacing: 0,
+    weight: 400,
+);
+
+$countdown-numbers: (
+    family: $font-body,
+    size: 32px,
+    lineHeight: 48px,
+    letterSpacing: 0,
+    weight: 700,
+);
+
+$countdown-numbers-large: (
+    family: $font-body,
+    size: 56px,
+    lineHeight: 48px,
+    letterSpacing: 0,
+    weight: 700,
+);
+
+$countdown-splits: (
+    family: $font-body,
+    size: 12px,
+    lineHeight: 28px,
+    letterSpacing: 0,
+    weight: 700,
+);
+
+$countdown-splits-large: (
+    family: $font-body,
+    size: 16px,
+    lineHeight: 28px,
+    letterSpacing: 0,
+    weight: 700,
+);
+
+h1 {
+    @include text-preset($text-preset-1b);
+    color: $clr-heading-dark;
+    @include respond(large, min) {
+        @include text-preset($text-preset-1a);
+    }
+}
+
+h3 {
+    @include text-preset($text-preset-2);
+    color: $clr-card-heading;
+}
+
+body {
+    @include text-preset($text-preset-5b);
+    color: $clr-body-light;
+    @include respond(large, min) {
+        @include text-preset($text-preset-4);
+    }
+}

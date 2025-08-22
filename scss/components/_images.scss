@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+.logo {
+    display: block;
+    width: 155px;
+    height: 30px;
+}
+
+.hero-img {
+    display: block;
+    width: 171px;
+    height: 192px;
+    @include respond(medium, min) {
+        max-width: 475px;
+        width: 100%;
+        height: auto; 
+    }
+}

@@ -1,0 +1,123 @@
+@use '../abstracts' as *;
+@use '../base/typography' as typo;
+
+.primary-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 171px;
+    height: 56px;
+    background-color: $clr-blue-dark;
+    color: $clr-white;
+    text-decoration: none;
+    outline: none;
+    @include text-preset(typo.$text-preset-5a);
+    font-weight: 700;
+    box-shadow: 0 25px 25px -10px hsla(227, 52%, 50%, 0.25);
+    margin: 0 auto;
+    border-radius: 28px;
+    cursor: pointer;
+    @include respond(medium, min) {
+        margin: unset;
+    }
+}
+
+.primary-btn:hover {
+    background-color: $clr-blue-light;
+}
+
+.primary-btn:focus-visible {
+    outline-offset: 4px;
+    outline: 1px solid $clr-blue-dark;
+}
+
+.card-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 171px;
+    height: 56px;
+    text-decoration: none;
+    outline: none;
+    @include text-preset(typo.$text-preset-5a);
+    font-weight: 700;
+    color: $clr-blue-dark;
+    margin: 0 auto;
+    border-radius: 28px;
+    cursor: pointer;
+    @include respond(medium, min) {
+        margin: unset;
+        grid-area: button;
+    }
+    @include respond(large, min) {
+        margin: 0 auto;
+        grid-area: unset;
+    }
+}
+
+.primary {
+    background-color: $clr-white;
+}
+
+.primary:focus-visible {
+    outline-offset: 4px;
+    outline: 1px solid $clr-white;
+}
+
+.secondary {
+    background-color: hsla(228, 100%, 66%, 0.15);
+}
+
+.secondary:focus-visible {
+    outline-offset: 4px;
+    outline: 1px solid hsla(228, 100%, 66%, 0.15);
+}
+
+.primary:hover {
+    color: $clr-blue-light;
+}
+
+.secondary:hover {
+    background-color:  hsla(228, 100%, 66%, 0.25);;
+}
+
+#submitBtn {
+    width: 100%;
+    height: 56px;
+    border-radius: 28px;
+    background-color: $clr-blue-dark;
+    color: $clr-white;
+    @include text-preset(typo.$text-preset-5a);
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 16px;
+}
+
+#submitBtn:hover {
+    background-color: $clr-blue-light;
+}
+
+#submitBtn:focus-visible {
+    outline-offset: 2px;
+    outline: 1px solid $clr-blue-dark;
+}
+
+.dropdown-toggle {
+    border: none;
+    outline: none;
+    background: none;
+    @include text-preset(typo.$text-preset-5a);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid hsla(227, 14%, 52%, 0.5);
+    padding: 0 16px 16px 16px;
+    cursor: pointer;
+}
+
+.dropdown-toggle:focus-visible {
+    border-bottom: 1px solid $clr-blue-dark;
+}
